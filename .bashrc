@@ -1,7 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) for examples
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -72,10 +70,16 @@ alias ssh='/usr/bin/time -f "==> Session time: %E min." ssh'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias mroe='more'
+alias pdw='pwd'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+if [ -z "$HOST" ] ; then
+	export HOST=${HOSTNAME}
+fi
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
