@@ -5,6 +5,7 @@ let g:molokai_original = 1
 filetype indent plugin on
 syntax on
 colorscheme molokai
+set listchars=tab:➟\ ,trail:·
 " must have
 set hidden
 set wildmenu
