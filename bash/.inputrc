@@ -1,0 +1,10 @@
+# See readline(3readline) and `info rluserman' for more information.
+
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+# Be 8 bit clean.
+set input-meta on
+set output-meta on
+set convert-meta off
+

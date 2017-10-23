@@ -1,15 +1,15 @@
 " theme
 let g:rehash256 = 1
 set t_Co=256
-let g:molokai_original = 1
 filetype indent plugin on
 syntax on
-colorscheme molokai
+colorscheme smyck
 set listchars=tab:➟\ ,trail:·
 " must have
 set hidden
 set wildmenu
 set showcmd
+set showmode
 " indent options
 set tabstop=2
 set shiftwidth=2
@@ -18,7 +18,7 @@ set autoindent noexpandtab
 set copyindent
 set list
 set wrap
-" find options 
+" find options
 set showmatch
 set hlsearch
 set incsearch
