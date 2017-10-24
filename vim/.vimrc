@@ -1,6 +1,8 @@
 " theme
 let g:rehash256 = 1
 set t_Co=256
+set encoding=utf-8
+scriptencoding utf-8
 filetype indent plugin on
 syntax on
 colorscheme smyck
