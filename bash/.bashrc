@@ -14,5 +14,5 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-PS1='\[\033[01;36m\]${debian_chroot:+($debian_chroot)}\u@\h:\[\033[00m\] \w\[\033[0;33m\] \$\[\033[00m\] '
+PS1='\[\033[1;31m\]${debian_chroot:+($debian_chroot)}\u@\H:\[\033[00m\] \w\[\033[0;33m\] \$\[\033[00m\] '
 
