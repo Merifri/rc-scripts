@@ -5,7 +5,7 @@ set encoding=utf-8
 scriptencoding utf-8
 filetype indent plugin on
 syntax on
-colorscheme smyck
+colorscheme molokai
 set listchars=tab:➟\ ,trail:·
 " must have
 set hidden
