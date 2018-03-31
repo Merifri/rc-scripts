@@ -1,8 +1,4 @@
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+#
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -18,4 +14,3 @@ fi
 
 source ~/.profile
 source ~/.bashrc
-
