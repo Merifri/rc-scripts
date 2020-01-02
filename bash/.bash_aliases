@@ -15,5 +15,9 @@ alias ..='cd ..'
 
 alias gitlog='git log --pretty=format:"%H - %an : %ar %n - %s %n" --graph'
 
-alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ps_names="docker ps --format '{{ .RunningFor }} : {{ .Names }}'"
+alias ps_versions="docker ps --format '{{ .RunningFor }} : {{ .Names }} : {{ .Image }}' | sed -r 's/^(.+) : .+:(.+)$/\1 : \2/g' | column -s':' -t"
 
+load_env() {
+  export $(grep "^[^#]*=.*" "${1:-.env}" | xargs)
+}
