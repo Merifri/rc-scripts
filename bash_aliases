@@ -19,5 +19,9 @@ alias ps_names="sudo docker ps --format '{{ .RunningFor }} : {{ .Names }}'"
 alias ps_versions="sudo docker ps --format '{{ .RunningFor }} : {{ .Names }} : {{ .Image }}' | awk -F':' '{ print $1 ":" $2 ":" $NF }' | column -s':' -t"
 
 load_env() {
-  export $(grep "^[^#]*=.*" "${1:-.env}" | xargs)
+  while IFS= read -r line; do
+    if echo $line | grep -q "^[^#]*=.*"; then
+      export "$line"
+    fi
+  done <${1:-.env}
 }
