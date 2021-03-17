@@ -16,7 +16,10 @@ alias ..='cd ..'
 alias gitlog='git log --pretty=format:"%H - %an : %ar %n - %s %n" --graph'
 
 alias ps_names="sudo docker ps --format '{{ .RunningFor }} : {{ .Names }}'"
-alias ps_versions="sudo docker ps --format '{{ .RunningFor }} : {{ .Names }} : {{ .Image }}' | awk -F':' '{ print $1 ":" $2 ":" $NF }' | column -s':' -t"
+
+ps_versions() {
+  sudo docker ps --format '{{ .RunningFor }} : {{ .Names }} : {{ .Image }}' | awk -F':' '{ print $1 ":" $2 ":" $NF }' | column -s':' -t
+}
 
 load_env() {
   while IFS= read -r line; do
